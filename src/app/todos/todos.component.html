@@ -1,0 +1,19 @@
+<h4 style="padding: 10px 250px;">Todos ({{todos.length}})</h4>
+<div class="w-full">
+
+          @for(i of todos; track i.id){
+            <div class="card">
+                <h5  [style]="i.isComplete?'text-decoration: line-through;':''" >{{i.title}}</h5>
+                <p>{{i.desc}}</p>
+               <div class="flex">
+                <button (click)="DeleteTodo.emit(i.id)">delete</button>
+              @if(!i.isComplete){
+                <button (click)="updateTodo.emit(i.id)">edit</button>
+              }
+               </div>
+            </div>
+           
+          
+          }
+
+</div>

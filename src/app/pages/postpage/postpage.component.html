@@ -1,0 +1,17 @@
+
+<div class="container">
+    
+
+            @for(i of contact; track i.id  ){
+                <div class="card col-sm-6 mx-auto my-4" style="">
+                    <div class="card-body">
+                      <h3 class="card-title">{{i.name}} </h3>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">{{i.email}} </h6>
+                      <p class="card-text">{{i.msg}}</p>
+                      <a routerLink="/post/{{i.id}}" class="card-link">View</a>
+                      <button (click)="onDeleteHandler(i.id)" class="btn-primary btn mx-5">delete</button>
+                    </div>
+                  </div>
+            }
+  
+</div>

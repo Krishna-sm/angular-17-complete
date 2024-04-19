@@ -1,0 +1,20 @@
+<form  [formGroup]="todosForm" >
+    <div class="mb-3">
+            <label for="title">Title</label>
+        <input formControlName="title" id="title" type="text" placeholder="Enter Title"/>
+    </div>
+    <div class="mb-3">
+        <label for="desc">Descrption</label>
+    <textarea formControlName="desc" rows="5" id="desc" type="text" placeholder="Enter Description"></textarea>
+</div>
+<div class="mb-3">
+
+    <button [disabled]="!todosForm.valid"  (click)="submitTodos.emit()" >Add Todo</button>
+
+</div>
+</form>
+
+
+<!-- {{ variable print karna chahte ho}} -->
+<!-- [property, props] -->
+<!-- (function pass,) -->
